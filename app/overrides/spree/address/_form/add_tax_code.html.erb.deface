@@ -1,0 +1,5 @@
+<!-- insert_after 'div.inner p.field:nth-child(2)' -->
+<p class="field" id="<%="#{address_id}lastname" %>">
+  <%= form.label :tax_code, t(:tax_code) %><span class="required">*</span><br />
+  <%= form.text_field :tax_code, :class => 'required' %>
+</div>
