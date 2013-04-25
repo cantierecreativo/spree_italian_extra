@@ -117,4 +117,4 @@ province = {
 }
 italy = Spree::Country.find_by_iso_name("ITALY")
 italy.states << province.map{ |code, name| Spree::State.new(name: name, abbr: code) }
-zone.members << italy.states
+zone.members << italy.states.map{ |p| Spree::ZoneMember.new(zoneable: p) }
