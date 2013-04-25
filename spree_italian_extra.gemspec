@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.name        = 'spree_italian_extra'
   s.version     = '1.3.2'
   s.summary     = 'Add extras for italy'
-  s.description = "Add 'codice_fiscale/piva' field to user and other functionality"
+  s.description = "Add 'codice_fiscale/piva' field to user and other features"
   s.required_ruby_version = '>= 1.8.7'
 
   s.author    = 'David Librera'
