@@ -6,6 +6,10 @@ module SpreeItalianExtra
         run 'bundle exec rake railties:install:migrations FROM=spree_italian_extra'
       end
 
+      def add_seeds
+        append_to_file 'db/seeds.rb', 'Spree::ItalianExtra::Engine.load_seed if defined?(Spree::ItalianExtra)'
+      end
+
       def run_migrations
          res = ask 'Would you like to run the migrations now? [Y/n]'
          if res == '' || res.downcase == 'y'
