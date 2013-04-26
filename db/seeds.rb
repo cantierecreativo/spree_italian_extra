@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 ### Shipping Regions
-zone  = Spree::Zone.create! name: "Italia", description: "Italia"
+zone  = Spree::Zone.create! name: "Italia", description: "Italia", default_tax: true
 
 # Province italiane
 province = {
@@ -116,5 +116,12 @@ province = {
   "VT" => "Viterbo",
 }
 italy = Spree::Country.find_by_iso_name("ITALY")
+italy.available = true
+italy.save!
 italy.states << province.map{ |code, name| Spree::State.new(name: name, abbr: code) }
 zone.members << italy.states.map{ |p| Spree::ZoneMember.new(zoneable: p) }
+
+iva_category = Spree::TaxCategory.create!(name: 'IVA', description: 'Imposta Valore Aggiunto', is_default: true)
+iva = Spree::TaxRate.create!(amount: 0.21, zone_id: zone.id, tax_category_id: iva_category.id,
+                            included_in_price: true, name: 'IVA21%', show_rate_in_label:true,
+                            calculator: Spree::Calculator::DefaultTax.create!)
