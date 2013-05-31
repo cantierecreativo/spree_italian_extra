@@ -2,4 +2,4 @@
 <p class="field" id="<%="#{address_id}tax_code" %>">
   <%= form.label :tax_code, t(:tax_code) %><span class="required">*</span><br />
   <%= form.text_field :tax_code, :class => 'required' %>
-</div>
+</p>
