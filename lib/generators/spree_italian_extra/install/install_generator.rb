@@ -18,6 +18,13 @@ module SpreeItalianExtra
            puts 'Skipping rake db:migrate, don\'t forget to run it!'
          end
       end
+
+      def load_data
+        res = ask 'Would you like to add data (italian regions)? [Y/n]'
+        if res.downcase == 'y'
+          Spree::ItalianExtra::Engine.load_seed if defined?(Spree::ItalianExtra)
+        end
+      end
     end
   end
 end

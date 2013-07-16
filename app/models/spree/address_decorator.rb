@@ -6,9 +6,9 @@ Spree::Address.class_eval do
 
   def check_tax_code
     if tax_code.nil?
-      errors.add(:tax_code, "Codice Fiscale mancante")
+      errors.add(:tax_code, I18n.t(:missing_tax_code))
     elsif tax_code.length != 16 && tax_code.length != 11
-      errors.add(:tax_code, "Codice Fiscale non valido")
+      errors.add(:tax_code, I18n.t(:invalid_tax_code))
     end
   end
 end
