@@ -1,4 +1,5 @@
 it:
-  tax_code: "Codice Fiscale o Partita Iva"
-  street_address_2: "Campanello"
+  spree:
+    tax_code: "Codice Fiscale o Partita Iva"
+    address_2: "Campanello"
   invalid_tax_code: "Codice Fiscale Non valido"

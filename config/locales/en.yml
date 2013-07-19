@@ -1,4 +1,5 @@
 en:
-  tax_code: "Tax Code (or Vatin)"
+  spree:
+    tax_code: "Tax Code (or Vatin)"
   invalid_tax_code: "Invalid tax code"
 
