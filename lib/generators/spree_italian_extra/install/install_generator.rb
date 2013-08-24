@@ -6,6 +6,10 @@ module SpreeItalianExtra
         run 'bundle exec rake railties:install:migrations FROM=spree_italian_extra'
       end
 
+      def add_javascripts
+        append_file 'app/assets/javascripts/store/all.js', "//= require store/spree_italian_extra\n"
+      end
+
       def add_seeds
         append_to_file 'db/seeds.rb', 'Spree::ItalianExtra::Engine.load_seed if defined?(Spree::ItalianExtra)'
       end
