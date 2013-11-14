@@ -1,7 +1,6 @@
 Spree::Address.class_eval do
   attr_accessible :tax_code
 
-  validates :tax_code, :presence => true
   validate  :check_tax_code
 
   def check_tax_code
