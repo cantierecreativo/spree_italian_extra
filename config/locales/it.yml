@@ -1,5 +1,4 @@
 it:
   spree:
     tax_code: "Codice Fiscale o Partita Iva"
-    address_2: "Campanello"
   invalid_tax_code: "Codice Fiscale Non valido"

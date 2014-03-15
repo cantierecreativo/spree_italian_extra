@@ -1,5 +1,5 @@
 en:
   spree:
-    tax_code: "Tax Code (or Vatin)"
+    tax_code: "Tax Code (or VAT)"
   invalid_tax_code: "Invalid tax code"
 
