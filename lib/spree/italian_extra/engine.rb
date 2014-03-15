@@ -20,7 +20,10 @@ module Spree
       end
 
       config.to_prepare &method(:activate).to_proc
+
+      initializer "spree_italian_extra.environment", before: :load_config_initializers do |app|
+        Spree::PermittedAttributes.address_attributes << :tax_code
+      end
     end
   end
 end
-
