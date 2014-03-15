@@ -7,7 +7,7 @@ module SpreeItalianExtra
       end
 
       def add_javascripts
-        append_file 'app/assets/javascripts/store/all.js', "//= require store/spree_italian_extra\n"
+        append_file 'vendor/assets/javascripts/spree/frontend/all.js', "//= require spree/frontend/spree_italian_extra\n"
       end
 
       def add_seeds

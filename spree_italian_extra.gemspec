@@ -2,20 +2,20 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_italian_extra'
-  s.version     = '2.0.3'
+  s.version     = '2.2.0'
   s.summary     = 'Add extras for italy'
   s.description = "Add 'codice_fiscale/piva' field to user and other features"
-  s.required_ruby_version = '>= 1.8.7'
+  s.required_ruby_version = '>= 1.9.3'
 
   s.author    = 'David Librera, Francesco Disperati'
   s.email     = 'fradispe@gmail.com, davidlibrera@gmail.com'
-  
+
   s.files       = `git ls-files`.split("\n")
   s.test_files  = `git ls-files -- {test,spec,features}/*`.split("\n")
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '~> 2.0.3'
+  s.add_dependency 'spree_core', '~> 2.2.0'
   s.add_dependency 'rails-i18n'
 
   s.add_development_dependency 'capybara', '~> 1.1.2'

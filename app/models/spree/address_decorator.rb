@@ -1,7 +1,6 @@
 Spree::Address.class_eval do
-  attr_accessible :tax_code
 
-  validate  :check_tax_code
+  validate :check_tax_code
 
   def check_tax_code
     if !country.nil? && country.name == "Italy"
