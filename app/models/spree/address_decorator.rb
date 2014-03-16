@@ -1,5 +1,5 @@
 Spree::Address.class_eval do
-  
+
   validate :check_tax_code
 
   def check_tax_code
