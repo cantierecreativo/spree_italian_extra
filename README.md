@@ -8,6 +8,10 @@ A collection of required things for an italian ecommerce:
 
 [Gorlami!](http://www.youtube.com/watch?v=krtnt191Drg)
 
+Installation
+------------
+    $ rails g spree_italian_extra:install
+
 Testing
 -------
 

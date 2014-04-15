@@ -120,6 +120,6 @@ italy.states << province.map{ |code, name| Spree::State.new(name: name, abbr: co
 zone.members << italy.states.map{ |p| Spree::ZoneMember.new(zoneable: p) }
 
 iva_category = Spree::TaxCategory.create!(name: 'IVA', description: 'Imposta Valore Aggiunto', is_default: true)
-iva = Spree::TaxRate.create!(amount: 0.21, zone_id: zone.id, tax_category_id: iva_category.id,
-                            included_in_price: true, name: 'IVA21%', show_rate_in_label:true,
+iva = Spree::TaxRate.create!(amount: 0.22, zone_id: zone.id, tax_category_id: iva_category.id,
+                            included_in_price: true, name: 'IVA 22%', show_rate_in_label:true,
                             calculator: Spree::Calculator::DefaultTax.create!)
